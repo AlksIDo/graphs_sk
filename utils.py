@@ -59,6 +59,9 @@ class GraphDataset(Dataset):
 
 
 def create_pg_loaders(graph_dataset=True):
+    """
+    Create datasets and dataloaders for pytorch geometric model or for non-graph model
+    """
     df = pd.read_excel("02-pdbbind-refined.xlsx", engine="openpyxl")
     df["e_predict"] = df["e_exp"] * 2 ** (-(df["rmsd"] ** 2) / 4)
     df["e_predict"] = df["e_predict"].map(lambda x: abs(x))
@@ -118,6 +121,9 @@ def create_pg_loaders(graph_dataset=True):
 
 
 def create_dgl_loaders():
+    """
+    Creates datasets and dataloaders for DGL model
+    """
     df = pd.read_excel("02-pdbbind-refined.xlsx", engine="openpyxl")
     df["e_predict"] = df["e_exp"] * 2 ** (-(df["rmsd"] ** 2) / 4)
     df["e_predict"] = df["e_predict"].map(lambda x: abs(x))
@@ -167,6 +173,9 @@ def create_dgl_loaders():
 
 
 def baseline_model_pg_dataset(train_dataset, test_dataset):
+    """
+    Create baseline model, which predict mean value on train_dataset, and measure RMSE
+    """
     criterion = nn.MSELoss(reduction="mean")
 
     prediction = np.mean([i.y.item() for i in train_dataset])
@@ -182,6 +191,9 @@ def baseline_model_pg_dataset(train_dataset, test_dataset):
 
 
 def non_graph_model_train(model, train_loader, test_loader, device):
+    """
+    Simple training pipeline for non-graph model
+    """
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
     criterion = nn.MSELoss()
 
@@ -210,6 +222,9 @@ def non_graph_model_train(model, train_loader, test_loader, device):
 
 
 def dgl_model_train(model, train_loader, test_loader, device):
+    """
+    Simple training pipeline for dgl model
+    """
     optimizer = torch.optim.Adam(model.parameters(), lr=0.001)
 
     model.train()
@@ -239,6 +254,9 @@ def dgl_model_train(model, train_loader, test_loader, device):
 
 
 def pg_model_train(model, train_loader, test_loader, device):
+    """
+    Simple training pipeline for pytorch geometric model
+    """
     optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
     criterion = nn.MSELoss()
 
