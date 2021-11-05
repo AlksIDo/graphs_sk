@@ -1,37 +1,31 @@
-2021-11-03 20:52:16.835 | INFO     | __main__:main:42 - Baseline model results: RMSE on test dataset: 8.563990328446478
-2021-11-03 20:52:20.952 | INFO     | __main__:main:48 - Starting non-graph model train...
-2021-11-03 20:55:02.634 | INFO     | __main__:main:54 - Epoch 50. Min RMSE: 4.569163799285889
-2021-11-03 20:57:23.599 | INFO     | __main__:main:54 - Epoch 100. Min RMSE: 4.569163799285889
-2021-11-03 20:59:16.953 | INFO     | __main__:main:54 - Epoch 150. Min RMSE: 4.532896041870117
-2021-11-03 21:01:10.549 | INFO     | __main__:main:54 - Epoch 200. Min RMSE: 4.263060569763184
-2021-11-03 21:03:04.253 | INFO     | __main__:main:54 - Epoch 250. Min RMSE: 4.263060569763184
-2021-11-03 21:04:58.357 | INFO     | __main__:main:54 - Epoch 300. Min RMSE: 4.17226505279541
-2021-11-03 21:06:53.197 | INFO     | __main__:main:54 - Epoch 350. Min RMSE: 4.17226505279541
-2021-11-03 21:08:50.509 | INFO     | __main__:main:54 - Epoch 400. Min RMSE: 4.17226505279541
-2021-11-03 21:10:43.846 | INFO     | __main__:main:54 - Epoch 450. Min RMSE: 4.17226505279541
-2021-11-03 21:12:38.224 | INFO     | __main__:main:54 - Epoch 500. Min RMSE: 4.17226505279541
-2021-11-03 21:12:38.225 | INFO     | __main__:main:55 - Non-graph model train finished! Min RMSE on test dataset: 4.17226505279541
-2021-11-03 21:12:38.227 | INFO     | __main__:main:63 - Starting graph DGL model train...
-2021-11-03 21:14:51.369 | INFO     | __main__:main:69 - Epoch 50. Min RMSE: 5.369515215311455
-2021-11-03 21:16:52.838 | INFO     | __main__:main:69 - Epoch 100. Min RMSE: 4.786340090963802
-2021-11-03 21:18:53.778 | INFO     | __main__:main:69 - Epoch 150. Min RMSE: 3.930487142887713
-2021-11-03 21:20:55.080 | INFO     | __main__:main:69 - Epoch 200. Min RMSE: 3.317711223483081
-2021-11-03 21:22:56.718 | INFO     | __main__:main:69 - Epoch 250. Min RMSE: 2.8235187765308307
-2021-11-03 21:24:58.363 | INFO     | __main__:main:69 - Epoch 300. Min RMSE: 2.12934820250792
-2021-11-03 21:27:00.033 | INFO     | __main__:main:69 - Epoch 350. Min RMSE: 1.961665294146032
-2021-11-03 21:29:01.233 | INFO     | __main__:main:69 - Epoch 400. Min RMSE: 1.8565152705526262
-2021-11-03 21:31:04.127 | INFO     | __main__:main:69 - Epoch 450. Min RMSE: 1.8565152705526262
-2021-11-03 21:33:06.577 | INFO     | __main__:main:69 - Epoch 500. Min RMSE: 1.8091076462585127
-2021-11-03 21:33:06.577 | INFO     | __main__:main:70 - DGL graph model train finished! Min RMSE on test dataset: 1.8091076462585127
-2021-11-03 21:37:31.328 | INFO     | __main__:main:83 - Epoch 50. Min RMSE: 6.069882869720459
-2021-11-03 21:41:50.843 | INFO     | __main__:main:83 - Epoch 100. Min RMSE: 4.6317667961120605
-2021-11-03 21:46:10.635 | INFO     | __main__:main:83 - Epoch 150. Min RMSE: 3.7887706756591797
-2021-11-03 21:50:42.577 | INFO     | __main__:main:83 - Epoch 200. Min RMSE: 3.373659372329712
-2021-11-03 21:55:15.033 | INFO     | __main__:main:83 - Epoch 250. Min RMSE: 3.158463716506958
-2021-11-03 21:59:49.577 | INFO     | __main__:main:83 - Epoch 300. Min RMSE: 3.158463716506958
-2021-11-03 22:04:29.151 | INFO     | __main__:main:83 - Epoch 350. Min RMSE: 2.8789966106414795
-2021-11-03 22:09:10.378 | INFO     | __main__:main:83 - Epoch 400. Min RMSE: 2.6970043182373047
-2021-11-03 22:13:53.127 | INFO     | __main__:main:83 - Epoch 450. Min RMSE: 2.448967218399048
-2021-11-03 22:18:22.137 | INFO     | __main__:main:83 - Epoch 500. Min RMSE: 2.3979108333587646
-2021-11-03 22:18:22.138 | INFO     | __main__:main:85 - Pytorch-geometric graph model train finished! Min RMSE on test dataset: 2.3979108333587646
-2021-11-03 22:18:22.138 | INFO     | __main__:main:89 - Comparison of models: BASELINE RMSE 8.563990328446478, NON-GRAPH MODEL 4.17226505279541, DGL GRAPH MIN RMSE 1.8091076462585127, PG GRAPH MIN RMSE 2.3979108333587646
+2021-11-05 16:51:54.419 | INFO     | __main__:main:42 - Baseline model results: RMSE on test dataset: 2.7835444443544857
+2021-11-05 16:51:58.178 | INFO     | __main__:main:48 - Starting non-graph model train...
+2021-11-05 16:53:51.763 | INFO     | __main__:main:54 - Epoch 50. Min RMSE: 1.5716726779937744
+2021-11-05 16:55:42.049 | INFO     | __main__:main:54 - Epoch 100. Min RMSE: 1.5716726779937744
+2021-11-05 16:57:33.645 | INFO     | __main__:main:54 - Epoch 150. Min RMSE: 1.5716726779937744
+2021-11-05 16:59:29.750 | INFO     | __main__:main:54 - Epoch 200. Min RMSE: 1.5716726779937744
+2021-11-05 16:59:29.750 | INFO     | __main__:main:55 - Non-graph model train finished! Min RMSE on test dataset: 1.5716726779937744
+2021-11-05 16:59:29.774 | INFO     | __main__:main:63 - Starting graph DGL model train...
+2021-11-05 17:02:04.821 | INFO     | __main__:main:69 - Epoch 50. Min RMSE: 2.137704719599246
+2021-11-05 17:05:23.212 | INFO     | __main__:main:69 - Epoch 100. Min RMSE: 1.956360534935606
+2021-11-05 17:08:31.375 | INFO     | __main__:main:69 - Epoch 150. Min RMSE: 1.8243573857275768
+2021-11-05 17:11:30.113 | INFO     | __main__:main:69 - Epoch 200. Min RMSE: 1.6967262119168582
+2021-11-05 17:14:37.318 | INFO     | __main__:main:69 - Epoch 250. Min RMSE: 1.6150106074679813
+2021-11-05 17:17:49.515 | INFO     | __main__:main:69 - Epoch 300. Min RMSE: 1.4913178786316637
+2021-11-05 17:21:04.424 | INFO     | __main__:main:69 - Epoch 350. Min RMSE: 1.3536988710828637
+2021-11-05 17:25:42.147 | INFO     | __main__:main:69 - Epoch 400. Min RMSE: 1.284312508925483
+2021-11-05 17:30:55.127 | INFO     | __main__:main:69 - Epoch 450. Min RMSE: 1.1828595913230098
+2021-11-05 17:33:35.149 | INFO     | __main__:main:69 - Epoch 500. Min RMSE: 1.076076427281859
+2021-11-05 17:33:35.149 | INFO     | __main__:main:70 - DGL graph model train finished! Min RMSE on test dataset: 1.076076427281859
+2021-11-05 17:39:17.828 | INFO     | __main__:main:85 - Epoch 50. Min RMSE: 2.616389036178589
+2021-11-05 17:44:29.095 | INFO     | __main__:main:85 - Epoch 100. Min RMSE: 1.7481224536895752
+2021-11-05 17:49:30.584 | INFO     | __main__:main:85 - Epoch 150. Min RMSE: 1.5230878591537476
+2021-11-05 17:54:22.533 | INFO     | __main__:main:85 - Epoch 200. Min RMSE: 1.4995899200439453
+2021-11-05 17:59:17.828 | INFO     | __main__:main:85 - Epoch 250. Min RMSE: 1.395286202430725
+2021-11-05 18:04:17.896 | INFO     | __main__:main:85 - Epoch 300. Min RMSE: 1.3613200187683105
+2021-11-05 18:08:55.667 | INFO     | __main__:main:85 - Epoch 350. Min RMSE: 1.324339509010315
+2021-11-05 18:13:20.665 | INFO     | __main__:main:85 - Epoch 400. Min RMSE: 1.2553869485855103
+2021-11-05 18:17:45.042 | INFO     | __main__:main:85 - Epoch 450. Min RMSE: 1.2553869485855103
+2021-11-05 18:22:09.539 | INFO     | __main__:main:85 - Epoch 500. Min RMSE: 1.2553869485855103
+2021-11-05 18:22:09.540 | INFO     | __main__:main:87 - Pytorch-geometric graph model train finished! Min RMSE on test dataset: 1.2553869485855103
+2021-11-05 18:22:09.540 | INFO     | __main__:main:91 - Comparison of models: BASELINE RMSE 2.7835444443544857, NON-GRAPH MODEL 1.5716726779937744, DGL GRAPH MIN RMSE 1.076076427281859, PG GRAPH MIN RMSE 1.2553869485855103

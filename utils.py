@@ -64,7 +64,6 @@ def create_pg_loaders(graph_dataset=True):
     """
     df = pd.read_excel("02-pdbbind-refined.xlsx", engine="openpyxl")
     df["e_predict"] = df["e_exp"] * 2 ** (-(df["rmsd"] ** 2) / 4)
-    df["e_predict"] = df["e_predict"].map(lambda x: abs(x))
 
     folder = "data/"
     node_ohe = OHE(categories=[list(range(23)), [0, 1], [0, 1]])
@@ -126,7 +125,6 @@ def create_dgl_loaders():
     """
     df = pd.read_excel("02-pdbbind-refined.xlsx", engine="openpyxl")
     df["e_predict"] = df["e_exp"] * 2 ** (-(df["rmsd"] ** 2) / 4)
-    df["e_predict"] = df["e_predict"].map(lambda x: abs(x))
 
     folder = "data/"
     node_ohe = OHE(categories=[list(range(23)), [0, 1], [0, 1]])
@@ -184,7 +182,7 @@ def baseline_model_pg_dataset(train_dataset, test_dataset):
     pred_labels = [prediction for i in range(len(test_dataset))]
 
     return (
-        mean_squared_error(pred_labels, true_labels, squared=True),
+        mean_squared_error(pred_labels, true_labels, squared=False),
         r2_score(pred_labels, true_labels),
         criterion(torch.tensor(pred_labels), torch.tensor(true_labels)).item(),
     )
@@ -218,7 +216,7 @@ def non_graph_model_train(model, train_loader, test_loader, device):
             true.extend(y.detach().cpu().numpy())
             preds.extend(out.detach().cpu().numpy())
 
-    return mean_squared_error(true, preds)
+    return mean_squared_error(true, preds, squared=False)
 
 
 def dgl_model_train(model, train_loader, test_loader, device):
@@ -250,14 +248,14 @@ def dgl_model_train(model, train_loader, test_loader, device):
         preds.extend(logits.detach().cpu().numpy())
         trues.extend(labels.detach().cpu().numpy())
 
-    return mean_squared_error(preds, trues)
+    return mean_squared_error(preds, trues, squared=False)
 
 
 def pg_model_train(model, train_loader, test_loader, device):
     """
     Simple training pipeline for pytorch geometric model
     """
-    optimizer = torch.optim.Adam(model.parameters(), lr=1e-4)
+    optimizer = torch.optim.Adam(model.parameters(), lr=5e-5)
     criterion = nn.MSELoss()
 
     model.train()
@@ -281,4 +279,4 @@ def pg_model_train(model, train_loader, test_loader, device):
             true.extend(data.y.detach().cpu().numpy())
             preds.extend(out.detach().cpu().numpy())
 
-    return mean_squared_error(true, preds)
+    return mean_squared_error(true, preds, squared=False)

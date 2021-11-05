@@ -47,7 +47,7 @@ def main():
 
     logger.info("Starting non-graph model train...")
     non_graph_model_rmse = []
-    for epoch in range(501):
+    for epoch in range(201):
         rmse = non_graph_model_train(model, train_loader_nong, test_loader_nong, device)
         non_graph_model_rmse.append(rmse)
         if epoch % 50 == 0 and epoch != 0:

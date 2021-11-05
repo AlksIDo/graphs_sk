@@ -10,7 +10,7 @@ from torch_geometric.nn import GraphConv, global_mean_pool
 class NonGraphModel(nn.Module):
     def __init__(self):
         super(NonGraphModel, self).__init__()
-        torch.manual_seed(12345)
+        torch.manual_seed(42)
         self.node1 = Linear(27, 30)
         self.node2 = Linear(30, 30)
         self.node3 = Linear(30, 1)
@@ -45,6 +45,7 @@ class NonGraphModel(nn.Module):
 class DGLRegressor(nn.Module):
     def __init__(self, in_dim, hidden_dim, n_classes):
         super(DGLRegressor, self).__init__()
+        torch.manual_seed(42)
         self.conv1 = dglnn.GraphConv(in_dim, hidden_dim)
         self.conv2 = dglnn.GraphConv(hidden_dim, hidden_dim)
         self.conv3 = dglnn.GraphConv(hidden_dim, hidden_dim)
@@ -77,7 +78,7 @@ class DGLRegressor(nn.Module):
 class PGRegressor(torch.nn.Module):
     def __init__(self, hidden_channels, node_feature_channels):
         super(PGRegressor, self).__init__()
-        torch.manual_seed(12345)
+        torch.manual_seed(42)
         self.conv1 = GraphConv(node_feature_channels, hidden_channels)
         self.conv2 = GraphConv(hidden_channels, hidden_channels)
         self.conv3 = GraphConv(hidden_channels, hidden_channels)
